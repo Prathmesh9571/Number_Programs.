@@ -1,0 +1,35 @@
+// Java Program To Check User Given Number is Even Number Or Odd Number.
+import java.util.Scanner;
+class Even_Odd_No
+{
+  public static void main(String [] args)
+  {
+    Scanner sc=new Scanner(System.in);
+    System.out.println("Enter a Number To Check The given Number is Even Or Odd:-");
+    int number=sc.nextInt();
+    if(number%2==0)
+    {
+      System.out.println("The Number is a Even:- "+number);
+    }
+    else
+    {
+      System.out.println("The Number is a Odd:- "+number);
+    }
+  }
+}
+_________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+// Java Program To Check User Given Number is Even Number Or Odd Number.(Using Ternary Operator)
+import java.util.Scanner;
+class Even_Odd_No_Ternay
+{
+  public static void main(String [] args)
+  {
+    Scanner sc=new Scanner(System.in);
+    System.out.println("Enter a Number To Check The given Number is Even Or Odd:-");
+    int num=sc.nextInt();
+    String output=(num%2==0)?"The Given Number is Even Number:-"+num:"The Given Number is Odd Number:-"+num;
+    System.out.println(output);
+  }
+}
+_________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
