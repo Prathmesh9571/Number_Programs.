@@ -1,0 +1,30 @@
+import java.util.*;
+class Bouncy_Number
+{
+  public static void main(String[]args)
+  {
+    Scanner sc=new Scanner(System.in);
+    System.out.println("Enter a Number to Check It is Bouncy Number Or Not:-")'
+    int num=sc.nextInt(),a=num;
+    boolean pos=false,neg=false;
+    while(a>8)
+    {
+      int rem1=a%10;
+      a/=10;
+      int rem2=a%10;
+      if(rem1>rem2)
+      {
+        neg=true;
+      }
+      if(pos&&neg)
+      {
+        System.out.println("It is a Bouncy Number:= "+num);
+        break;
+      }
+      else
+      {
+        System.out.println("It is Not a Bouncy Number:= "+num);
+      }
+    }
+  }
+}
