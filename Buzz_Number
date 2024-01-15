@@ -1,0 +1,13 @@
+//Check The Number It is a Buzz Number or Not.
+import java.util.Scanner;
+class  Buzz_Number
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter a number To Check It is Buzz Number Or Not:-");
+		int num=sc.nextInt(),a=num;
+		String buzz=(a%10==7||a%7==0)?"It is a Buzz Number:-"+num :"It is not a buzz number:- "+num;
+		System.out.println(buzz);
+	}
+}
