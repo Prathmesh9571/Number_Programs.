@@ -1,0 +1,24 @@
+//wap to read check the given number is neon or not(Neon Number)
+import java.util.Scanner;
+class Neon_Number
+{
+    public static void main(String[]args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter a Number to Check The Given Number is Neon || Not");
+        int num=sc.nextInt(),sqr=num*num,sum=0;
+        while(sqr!=0)
+        {
+            sum+=sqr%10;
+            sqr/=10;
+        }
+        if(sum==num)
+        {
+            System.out.println("The Number:-" +num+ " is Neon Number.");
+        }
+        else
+        {
+            System.out.println("The Number:-" +num+ " is Not a Neon Number.");
+        }
+    }
+}
