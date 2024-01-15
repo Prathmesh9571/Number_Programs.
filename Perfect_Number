@@ -1,0 +1,30 @@
+/*A number whose sum of factors (excluding the number itself) is equal to the number is called a perfect number. In other words, if the sum of positive divisors (excluding the number itself) 
+of a number equals the number itself is called a perfect number.*/
+// Perfect number
+import java.util.Scanner;
+class PerfectNumber1
+{
+    public static void main(String[]args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter a Number:-");
+        int num=sc.nextInt();
+        int sum=0;
+        for(int i=1;i<=num;i++)
+        {
+            if (num%i==0)
+            {
+                sum=sum+i;
+            }
+        }
+        System.out.println(sum);
+        if(sum-num==num)
+        {
+            System.out.println("It is a perfect number:"+num);
+        }
+        else
+        {
+            System.out.println("It is Not a perfect number:"+num);
+        }
+    }
+}
