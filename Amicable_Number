@@ -1,0 +1,46 @@
+//Enter a Two Number And check it is Amicable Number. 
+import java.util.Scanner;
+class  Amicable_Number
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter a First Number to Check :-");
+		int num1=sc.nextInt();
+		System.out.println("Enter a Second Number To Check :-");
+		int num2=sc.nextInt();
+		int sum1=0,sum2=0;
+		// positive number
+		 int number1 = num1;
+		int number2=num2;
+		System.out.print("Factors of " + number2 + " are: ");
+		 System.out.print("Factors of " + number1 + " are: ");
+		// loop runs from 1 to 60
+		for (int i = 1; i <number1; ++i) 
+		{	
+		 // if number is divided by i
+		// i is the factor
+		if (number1 % i == 0 ) 
+		{
+        System.out.print(i + " ");
+			sum1+=i;
+		}
+		}
+		for (int j=1;j <number2;++j)
+			{
+				if (number2%j==0)
+				{
+					System.out.print(j + " ");
+					sum2+=j;
+				}
+			}
+		if (sum2==num1&&sum1==num2)
+		{
+			System.out.println("It is Amicable");
+		}
+		else
+		{
+			System.out.println("It is Not Amicable");
+		}
+	}
+}
