@@ -1,0 +1,34 @@
+// FIND NUMBER WHICH COMES IN MIDDLE NOR A GREATEST OR NOT A SMALLEST.
+import java.util.Scanner;
+class MiddleNumber 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter a Three Numbers To Find a Midlle Number Which is (NOR A GREATEST OR NOT A SMALLEST):- ");
+		System.out.println("Enter a 1st Number:-");
+    int a=sc.nextInt();
+    System.out.println("Enter a 2nd Number:-");
+		int b=sc.nextInt();
+    System.out.println("Enter a 3rd Number:-");
+		int c=sc.nextInt();
+//To Find Midlle Number Take The Help Of If Else - If Else IF Ladder Controlflow Statements. 
+if (a==b|a==c|b==c)
+		{
+			System.out.println("The value are requested We Cant Find Middle number");
+			System.exit(10);
+		}
+		if (a>b&&a<c||a<b&&a>c)
+		{
+		 System.out.println("The Middle Number is:- "+a);
+		}
+		else if (b>a&&b<c||b<a&&b>c)
+		{
+			System.out.println("The Middle Number is:- "+b);
+		}
+		else
+		{
+			System.out.println("The Middle Number is:- "+c);
+		}	
+	}
+}
