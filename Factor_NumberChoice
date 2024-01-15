@@ -1,0 +1,57 @@
+import java.util.Scanner;
+class Factor_Choice
+{
+  public static void main(String[]args)
+  {
+    Scanner sc=new Scanner(System.in);
+    System.out.println("Select What You Want to Print:-1.PrintFactors,2.CountofFactor,3.SumofFactor");
+    int choice=sc.nextInt();
+    System.out.println("Enter a Number:-");
+    int num=sc.nextInt();
+    switch(choice)
+    {
+      case 1:
+      {
+        System.out.println("Factors of given Number:-");
+        for(int start=1;start<=num;start++)
+        {
+          if(num%start==0)
+          {
+            System.out.println(start);
+          }
+        }
+        break;
+      }
+      case 2:
+      {
+        int count=0;
+        for(int start=1;start<=num;start++)
+        {
+          if(num%start==0)
+          {
+            count++;
+          }
+        }
+        System.out.println("Factor of Count is:- "+count);
+        break;
+      }
+      case 3:
+      {
+        int sum=0;
+        for(int start=1;start<=num;start++)
+        {
+          if(num%start==0)
+          {
+            sum+=start;
+          }
+        }
+        System.out.println("Sum of Factor is :- "+sum);
+        break;
+      }
+      default:
+      {
+      System.out.println("Enter a Correct choice!!!");
+      }
+    }
+  }
+}
