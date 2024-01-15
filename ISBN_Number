@@ -1,0 +1,26 @@
+//Write a Program to read if Multiply it sum modulus by zero then it is ISBN Number.
+import java.util.Scanner;
+class  ISBN_number
+{
+    public static void main(String[]args) 
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter a Number to find ISBN Number");
+        long num=sc.nextLong(),count=1,sum=0;
+        while (num!=0) 
+        {
+            long rem=num%10;
+            sum=(rem*count)+sum;
+            num/=10;
+            count++;
+        }   
+        if (sum%11==0)
+        {
+            System.out.println("it is a ISBN number"+num);    
+        } 
+        else 
+        {
+            System.out.println("it is Not a ISBN number"+num);
+        }     
+    }
+}
