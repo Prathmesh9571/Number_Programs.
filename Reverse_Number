@@ -1,0 +1,24 @@
+//Reverse The Number
+import java.util.*;
+class  Reverse_Number
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter a Number to Reverse It:-");
+		int num=sc.nextInt(),reverse=0,temp=num;
+	//Logic of For Loop.
+	    for(;num!=0;num/=10)
+        {
+            reverse=(reverse*10)+num%10;
+        }
+	//Logic Of While Loop
+
+		while (num!=0)
+		{
+			reverse=(reverse*10)+num%10;
+			num/=10;	
+		}
+		System.out.println("The Number Of Given:-" +temp+ " Reverse is: " +reverse);
+	}
+}
