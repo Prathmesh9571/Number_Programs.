@@ -1,0 +1,24 @@
+import java.util.*;
+Class Xylem_Phloem
+{
+  public staic void main(String []args)
+  {
+    Scanner sc=new Scanner(System.in);
+    System.out.println("Enter a Number To Check it is Xylem or Phloem Number :-");
+    int a=sc.nextInt(),md=0,f1=0,f1=f1+a%10,a/=10;
+    while(a>9)
+    {
+      md+=a%10;
+      a/=10;
+    }
+    f1+=a;
+  if(f1==md)
+  {
+    System.out.println("The Number is Xylem Number:- "+a);
+  }
+  else
+  {
+    System.out.println("The Number is Phloem Number:- "+a);
+  }
+}
+}
