@@ -1,0 +1,40 @@
+// write a program to Strong number in java up to 1 To 10000...
+import java.util.Scanner;
+class Strong_Numbers 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner (System.in);
+		System.out.println("Enter a starting Number ");
+		int start=sc.nextInt();
+		if (start==getSum(start))
+		{
+			System.out.println("It is a strong number:="+start);
+		}	
+		else 
+		{
+			System.out.println("It is not a Strong Number:="+start);
+		}
+	}
+	public static int getSum(int num)
+	{
+		int sum=0;
+		while (num!=0)
+		{
+			int rem=num%10;
+			sum+=factorial(rem);
+			num/=10;
+		}
+		return sum;
+	}
+	public static int factorial(int num)
+	{
+		System.out.println("fact method begin:="+num);	
+		int fact=1;
+		for (int i=num;i>0;i++ )
+		{
+			fact*=i;
+		}
+			return fact;
+	}
+}
