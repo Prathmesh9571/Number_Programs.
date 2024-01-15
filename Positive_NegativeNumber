@@ -1,0 +1,25 @@
+// Java Program To Check Number Is given By User its Positve Number or Negative Number.
+import java.util.Scanner;
+class Postive_Negative
+{
+  public static void main(String[]args)
+  {
+    Scanner sc=new Scanner(System.in);
+    System.out.println("Enter the Number to check It is Positive Number or Negative Number :-");
+    int a=sc.nextInt();
+    // Using If Condition The Number is greater Than 0 the condition will be statisfied and print Positive,if Condition will false the else part execute & print Negative Number
+    if(a>0)
+    {
+      System.out.println("Number is Positive Number: "+a);
+    }
+//Zero is an integer, but it’s neither positive nor negative. It’s the only number that’s not positive or negative.Zero is still an integer because it’s a whole number and doesn’t contain any fractional part. This means it contains no fractions or decimals.    
+    else if(a==0)
+    {
+      System.out.println("Number is Not a Positive OR Negative Number its a Whole Number: "+a);
+    }
+    else
+    {
+      System.out.println("Number is Negative Number: "+a);
+    }
+  }
+}
