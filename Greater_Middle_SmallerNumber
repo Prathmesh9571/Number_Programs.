@@ -1,0 +1,24 @@
+// Java Program To Check The Numbers Which One Is Greatest-Middle-Smallest By Using Three Number.(Using Ternary Operator).
+import java.util.Scanner;
+class Greatest_Middle_SmallestNumber 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter a Three Numbers To Check Which is Greatest Middle And Smallest:-");
+		System.out.println("Enter a first Number:-");
+    int a=sc.nextInt();
+    System.out.println("Enter a second Number:-");
+    int b=sc.nextInt();
+    System.out.println("Enter a third Number:-");
+    int c=sc.nextInt();
+//Using Ternary Operator We Will Compare The Value To Each Other.
+    int smallest=a<b&&a<c?a:b<c?b:c;
+    int middle=a!=b&&b!=c?a:b!=c?b:c;
+    int largest=a>b&&a>c?a:b>c?b:c;
+
+		System.out.println("The Smallest Number is: "+smallest);
+		System.out.println("The Midlle Number is: "+middle);
+		System.out.println("The Largest Number is "+largest);
+  }
+}
