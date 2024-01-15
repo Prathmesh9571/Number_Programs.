@@ -1,0 +1,27 @@
+//Converting The Value in string And Check The Number is Automorphic Number or not?
+import java.util.Scanner;
+class  Automorphic_Number 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter a Number To check Wheather it is Automorphic number  Or Not");
+		int num=sc.nextInt(),b=num*num,div=1,rem;
+		String a1=num+"";
+		// For get Length Of given number (count)
+		int size=a1.length();
+		for (int i=1;i<=size;i++)
+		{
+			div*=10;
+		}
+			rem=b%div;
+		if (rem==num)
+		{
+			System.out.println("It is Automorphic Number= " +num);
+		}
+		else
+		{
+			System.out.println("It is Not Automorphic Number= " +num);
+		}	
+	}
+}
