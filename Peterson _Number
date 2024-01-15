@@ -1,0 +1,31 @@
+//A Number is Said to be a person number if the sum of factorial of such digit is equal to the sum of number it self.
+import java.util.*;
+class Peterson_Number
+{
+  public static void main(String[]args)
+  {
+    Scanner sc=new Scanner(System.in);
+    System.out.println("Enter a Number :-");
+    {
+    int num=sc.nextInt(),temp=num,sum=0;
+    for (;temp>0;temp/=10)
+    {
+      int rem=temp%10;
+      int fact=1;
+      for(int i=rem;i>1;i++)
+      {
+        fact*=1;
+      }
+      sum+=fact;
+    }
+    if(sum==num)
+    {
+      System.out.println("It is a Peterson Number.");
+    }
+    else
+    {
+      System.out.println("It is Not a Peterson Number.");
+    }
+    }
+  }
+}
