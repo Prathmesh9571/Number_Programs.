@@ -1,0 +1,40 @@
+import java.util.Scanner;
+class PrimeNumber 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter a Number :- ");
+		int num=sc.nextInt();
+		System.out.println("Enter a Number upto How many You want a Prime number:-");
+		int num2=sc.nextInt();
+		int temp=num;
+
+		for (int i=1;i<=num2; )
+		{
+			for (;;num++)
+			{
+				if (isPrime(num))
+				{
+					System.out.println("Prime number= "+num);
+					i++;
+					num++;
+					break;	
+				}
+			}
+		}//end of outer loop	
+	}
+	public static boolean isPrime(int num)
+	{
+		int count=0;
+		for (int i=1;i<=num;i++)
+		{
+			if (num%i==0)
+			count++;
+		}
+		if (count==2)
+		return true;
+		else 
+		return false;
+	}
+} 
