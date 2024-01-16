@@ -1,0 +1,29 @@
+//A Duck number is a number which has zeroes present in it, but there should be no zero present in the beginning of the number. For example 3210=DuckNumber,52010=DuckNumber/ 0123=NotDuckNumber.
+import java.util.*;
+public class Duck_Number
+{
+	public static void main(String[] args)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter a Number To Find It is a Duck Number or Not :-");
+		int num=sc.nextInt(),n=num,r;
+		boolean temp=false;
+		while(n>0)
+		{
+			r=n%10;
+			if(r==0)
+			{
+				temp=true;
+			}
+			n/=10;
+		}
+		if(temp)
+		{
+			System.out.println("The number is a Duck Number "+num);
+		}
+		else
+		{
+			System.out.println("The number is Not a Duck Number "+num);
+		}	
+	}
+}
