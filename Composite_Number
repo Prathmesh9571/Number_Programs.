@@ -1,0 +1,40 @@
+/* In mathematics, numbers that contain more than two factors are called Composite numbers, or A number that can be produced by multiplying two smallest positive integers and should have at least one divisor apart from 1 and itself. The number always contains more than two factors.   It contains more than two factors
+-They are evenly divisible by the factors
+-4 is the smallest composite number
+-Each Composite number is the factor of itself
+-The composite number will contain at least two prime numbers as their factors*/
+import java.util.*;
+public class Composite_Number 
+{
+   public static void main(String[] args) 
+   {
+	   Scanner scanner = new Scanner(System.in);
+	   System.out.print("Enter a number to find It Is Composite Number or not : ");
+	        int number = scanner.nextInt();
+	        if (isComposite(number))
+	        {
+	            System.out.println(number + " is a composite number.");
+	        } else {
+	            System.out.println(number + " is not a composite number.");
+	        }
+   }
+
+	    // Function to check if a number is composite
+	    private static boolean isComposite(int num)
+	    {
+	        if (num <= 1) 
+	        {
+	            return false; // 0 and 1 are not considered composite numbers
+	        }
+
+	        for (int i = 2; i <= num / 2; i++)
+	        {
+	            if (num % i == 0) 
+	            {
+	                return true; // The number is divisible by i, hence composite
+	            }
+	        }
+	        return false; // The number is not divisible by any number, hence not composite
+	    }
+	}
+
