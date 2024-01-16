@@ -1,0 +1,34 @@
+//A number is said to be the Disarium number when the sum of its digit raised to the power of their respective positions is equal to the number itself.
+For example, 175 is a Disarium number as follows 11 + 72 + 53 = 1 + 49 + 125 = 175
+class Disarium_Number
+{
+	public static void main(String[] args)
+	{
+		int num=135,num2=num,num3=num,count=0,sum=0;
+		while(num3>0)
+		{
+			count++;
+			num3/=10;
+		}
+		while(num2>0)
+		{
+			int rem=num2%10;
+			int pro=1;
+			for(int i=1;i<=count;i++)
+			{
+				pro*=rem;
+			}
+			count--;
+			sum+=pro;	
+			num2/=10;
+		}
+		if(sum==num)
+		{
+			System.out.println("disarium number "+sum+" = "+num);
+		}
+		else
+		{
+			System.out.println("not a disarium number "+sum+" != "+num);
+		}
+	}
+}
