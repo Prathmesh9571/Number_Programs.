@@ -1,0 +1,34 @@
+# These program are design specifically to Create or Find Range of Reverse number Using Methods.
+# create package
+package String_Programs;
+# Create class
+public class Reverse_NumberMethod {
+  # create main method to execute
+	public static void main(String[] args) {
+	  # Creating Object Of Class to access Non Method Or ...
+		Reverse_NumberMethod ref=new Reverse_NumberMethod();
+    # Create two variable for range
+		int start=100,end=300;
+    # using For Loop To Itterate the value from strat to end
+		for(;start<=end;start++)
+		{
+			System.out.println(ref.reveerseMethod(start));
+		}
+	}
+  # Creating a Method for Reverse the number
+	public int reveerseMethod(int a)
+	{
+    # take one temporary variable initial value is 0 for reverse the value
+		int rev=0;
+    # using of While Lopp  for possible the condition satisfy
+		while (a>0) {
+			int rem=a%10;
+      # logic for reverse the number
+			rev=rev*10+rem;
+      # To update the value using /
+			a/=10;
+		}
+    # returning the value of reverse to int return type
+		return rev;
+	}
+}
